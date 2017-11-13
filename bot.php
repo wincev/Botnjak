@@ -3,7 +3,7 @@ error_reporting(-1);
 
 //require "vendor/autoload.php";
 include 'credentials.php';
-use Abraham\TwitterOAuth\TwitterOAuth;
+use TwitterOAuth\TwitterOAuth;
 use Analog\Analog;
 
 ini_set('memory_limit', '2048M');
