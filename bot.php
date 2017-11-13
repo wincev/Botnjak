@@ -1,7 +1,7 @@
 <?php 
 error_reporting(-1);
 
-require "vendor/autoload.php";
+//require "vendor/autoload.php";
 include 'credentials.php';
 use Abraham\TwitterOAuth\TwitterOAuth;
 use Analog\Analog;
@@ -38,7 +38,8 @@ foreach ($results->statuses as $result) {
    $tweetID = $result->id_str;
    Analog::log('{$reply} to Tweet: $text \n');
    //Reply to tweet
-   $response = $connection->post('statuses/update' , array('status' => $reply, 'in_reply_to_status_id' => $result->id_str));
+   file_put_contents('tweet'. time() . '.tweetÄ');
+   //$response = $connection->post('statuses/update' , array('status' => $reply, 'in_reply_to_status_id' => $result->id_str));
 }
 
 ?>
